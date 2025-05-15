@@ -26,7 +26,9 @@ void stack_free(Stack *stack) {
 
 int stack_is_empty(const Stack *stack) { return stack->top == -1; }
 
-int stack_is_full(const Stack *stack) { return stack->top == stack->capacity - 1; }
+int stack_is_full(const Stack *stack) {
+  return stack->top == stack->capacity - 1;
+}
 
 int stack_push(Stack *stack, int value) {
   if (stack_is_full(stack)) {
