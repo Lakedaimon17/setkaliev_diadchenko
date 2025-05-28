@@ -3,6 +3,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#define ERROR_STACK_OVERFLOW -1
+#define ERROR_STACK_UNDERFLOW -2
+
 typedef struct {
   int *data;
   int top;

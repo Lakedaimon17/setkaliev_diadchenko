@@ -65,7 +65,7 @@ void test_stack_pop_empty() {
   stack_pop(&stack, &value);
   assert(stack_pop(&stack, &value) == 0);
   assert(value == -1);
-  assert(stack_pop(&stack, &value) == -1);
+  assert(stack_pop(&stack, &value) == ERROR_STACK_UNDERFLOW);
   stack_free(&stack);
 }
 
@@ -73,7 +73,7 @@ void test_stack_peek_empty() {
   Stack stack;
   int value;
   stack_init(&stack, 2);
-  assert(stack_peek(&stack, &value) == -1);
+  assert(stack_peek(&stack, &value) == ERROR_STACK_UNDERFLOW);
   stack_free(&stack);
 }
 
@@ -85,7 +85,7 @@ void test_stack_push_full() {
     stack_push(&stack, i);
   }
   stack_push(&stack, 3);
-  assert(stack.top == size);
+  assert(stack.top == size-1);
   stack_free(&stack);
 }
 
