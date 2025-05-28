@@ -4,11 +4,11 @@ int root(double a, double b, double c, double *roots, int *num_roots,
          double eps) {
   double D, x1, x2;
   if (fabs(a) <= eps) {
-    return -1;
+    return ERROR_LINEAR_EQUATION;
   }
   D = b * b - 4 * a * c;
   if (D < 0) {
-    return -2;
+    return ERROR_NO_REAL_ROOTS;
   } else if (fabs(D) <= eps) {
     x1 = -b / (2 * a);
     if (x1 == 0.0) {

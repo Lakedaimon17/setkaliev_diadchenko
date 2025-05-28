@@ -7,7 +7,7 @@ void test_root_1() {
   double eps = 1E-14;
 
   int result = root(0, 0, 0, roots, &num_roots, eps);
-  assert(result == -1);
+  assert(result == ERROR_LINEAR_EQUATION);
 }
 void test_root_2() {
 
@@ -41,7 +41,7 @@ void test_root_4() {
   double eps = 1E-14;
 
   int result = root(1, 0, 1, roots, &num_roots, eps);
-  assert(result == -2);
+  assert(result == ERROR_NO_REAL_ROOTS);
 }
 void test_root_5() {
 
