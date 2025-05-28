@@ -85,7 +85,7 @@ void test_stack_push_full() {
     stack_push(&stack, i);
   }
   stack_push(&stack, 3);
-  assert(stack.top == size-1);
+  assert(stack.top == size - 1);
   stack_free(&stack);
 }
 

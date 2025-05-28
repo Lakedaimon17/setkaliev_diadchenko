@@ -12,9 +12,7 @@ void stack_free(Stack *stack) {
     free(stack->data);
 }
 
-int stack_is_empty(const Stack *stack) {
-  return stack->top == -1;
-}
+int stack_is_empty(const Stack *stack) { return stack->top == -1; }
 
 int stack_is_full(const Stack *stack) {
   return stack->top == stack->capacity - 1;
