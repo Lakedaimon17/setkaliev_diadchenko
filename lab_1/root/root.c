@@ -24,7 +24,7 @@ int root(double a, double b, double c, double *roots, int *num_roots,
       x1 = (-b - sqrt(D)) / (2 * a);
     }
     x2 = c / (a * x1);
-    if (x1-x2 > eps) {
+    if (x1 - x2 > eps) {
       double temp = x1;
       x1 = x2;
       x2 = temp;
