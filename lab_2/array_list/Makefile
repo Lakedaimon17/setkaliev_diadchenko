@@ -25,4 +25,3 @@ array_list_test: array_list_test.o array_list.a linear_allocator/linear_allocato
 
 test: array_list_test
 	./array_list_test
-	
